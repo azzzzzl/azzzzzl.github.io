@@ -374,11 +374,12 @@ section {
 
 .project-img {
     height: 180px;
-    background-color: #0e1622;
+    background-color: var(--bg-color);
     display: flex;
     align-items: center;
     justify-content: center;
     border-bottom: 2px solid var(--border-color);
+    transition: background-color 0.2s ease;
 }
 
 /* TAMBAHKAN KODE INI TEPAT DI BAWAHNYA */
