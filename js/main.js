@@ -1,10 +1,10 @@
 // ========================================================
-// 1. SWITCHER TEMA DARK / LIGHT (Kesan Personal - SIQ4)
+// 1. PENGATUR TEMA (DARK / LIGHT MODE)
 // ========================================================
 const themeToggleBtn = document.getElementById('theme-toggle');
 const savedTheme = localStorage.getItem('theme');
 
-// Validasi preferensi tema lokal pengguna
+// Cek preferensi tema yang tersimpan di browser
 if (savedTheme) {
     document.body.setAttribute('data-theme', savedTheme);
     if (savedTheme === 'light') {
@@ -27,28 +27,27 @@ themeToggleBtn.addEventListener('click', () => {
 });
 
 // ========================================================
-// 2. VALIDASI FORMULIR & INTERAKSI RESPONSIF (SIQ5, SIQ7)
+// 2. VALIDASI FORMULIR NEWSLETTER
 // ========================================================
 const contactForm = document.getElementById('contact-form');
 
 contactForm.addEventListener('submit', function(event) {
-    // Intersepsi submit bawaan HTML agar tetap berjalan secara statis
     event.preventDefault();
     
-    // Penangkapan input elemen form
+    // Ambil isi input data formulir
     const nameInput = document.getElementById('name').value.trim();
     const emailInput = document.getElementById('email').value.trim();
     const messageInput = document.getElementById('message').value.trim();
     
-    // Validasi kelengkapan isian field logis sebelum feedback dijalankan
-    if (nameInput === "" || emailInput === "" || messageInput === "") {
-        alert("Kesalahan: Harap lengkapi Riot ID, Email, dan Pesan Anda dengan benar.");
+    // Cek apakah ada field kosong
+    if (!nameInput || !emailInput || !messageInput) {
+        alert("Peringatan: Silakan lengkapi seluruh kolom formulir sebelum mengirim.");
         return;
     }
     
-    // Pengiriman umpan balik responsif instan (Aspek Kualitas Interaksi WebQual)
-    alert(`Berhasil! Terima kasih ${nameInput}, email Anda telah terdaftar dalam basis data komunitas VCT Pacific Hub.`);
+    // Beri info sukses ke pengguna
+    alert(`Riot ID ${nameInput} berhasil didaftarkan! Update seputar liga akan segera kami kirim ke email Anda.`);
     
-    // Reset isian field formulir setelah aksi sukses
+    // Kosongkan form kembali
     contactForm.reset();
 });

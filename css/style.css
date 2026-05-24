@@ -1,26 +1,42 @@
-/* ==========================================
-   RESET, VARIABEL & TEMA VALORANT PACIFIC (U4, U8)
-   ========================================== */
+/* ========================================================
+   VARIABEL & TEMA WARNA ESPORTS BARU (FRESH ENERGY)
+   ======================================================== */
 :root {
-    --bg-color: #0d121a;      /* Hitam kebiruan deep khas esports */
-    --card-bg: #161f2b;       /* Abu-abu biru gelap untuk container */
-    --text-color: #f1f5f9;    /* Putih slate cerah */
-    --text-muted: #94a3b8;    /* Abu-abu slate redup */
-    --primary: #ff4655;       /* Merah Neon Utama VALORANT */
-    --secondary: #38bdf8;     /* Sky blue neon untuk aksen wilayah Pacific */
-    --border-color: #243242;  /* Garis batas komponen */
+    /* Latar Belakang: Menggunakan base violet-charcoal pekat yang bersih */
+    --bg-color: #080b11;       
+    --card-bg: #111622;        /* Container abu-gelap berdimensi tinggi */
+    
+    /* Warna Teks */
+    --text-color: #f8fafc;     /* Putih bersih sedikit keabuan */
+    --text-muted: #94a3b8;     /* Abu-abu terang untuk deskripsi */
+    
+    /* Palet Warna Utama (Fresh Esports Accent) */
+    --primary: #cfff00;        /* Neon Lime Green (Warna utama yang bikin fresh) */
+    --secondary: #00f2ff;      /* Electric Cyan/Teal (Aksen pendukung) */
+    --accent-dark: #7c3aed;    /* Cyber Violet (Untuk efek hover/elemen sekunder) */
+    
+    /* Garis Batas / Border */
+    --border-color: #1e293b;   
     --font-main: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Variabel Alternatif untuk Light Mode (SIQ4) */
+/* Variabel untuk Light Mode (Tetap Sejuk dan Kontras) */
 [data-theme="light"] {
-    --bg-color: #f8fafc;
+    --bg-color: #f1f5f9;
     --card-bg: #ffffff;
     --text-color: #0f172a;
-    --text-muted: #475569;
+    --text-muted: #64748b;
     --border-color: #cbd5e1;
+    
+    /* Penyesuaian warna aksen di light mode agar kontrasnya pas */
+    --primary: #10b981;        /* Emerald Green cerah */
+    --secondary: #0ea5e9;      /* Sky Blue */
+    --accent-dark: #6366f1;    /* Indigo */
 }
 
+/* ========================================================
+   RESET DASAR
+   ======================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -32,166 +48,240 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-main);
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.2s ease, color 0.2s ease;
     line-height: 1.6;
     padding-top: 70px;
 }
 
-/* ==========================================
-   NAVBAR (U2, U3)
-   ========================================== */
+/* ========================================================
+   NAVBAR COMPONENT
+   ======================================================== */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(13, 18, 26, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(8, 11, 17, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
-    transition: background 0.3s;
+    transition: background 0.2s ease;
 }
+
 [data-theme="light"] .navbar {
-    background-color: rgba(248, 250, 252, 0.85);
+    background-color: rgba(241, 245, 249, 0.9);
 }
+
 .nav-container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 800;
     text-decoration: none;
     color: var(--text-color);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
-.logo span { color: var(--secondary); } /* Aksen biru Pacific */
+
+.logo span { 
+    color: var(--primary); 
+}
+
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
+
 .nav-links a {
     text-decoration: none;
     color: var(--text-muted);
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.2s;
+    font-size: 0.9rem;
+    transition: color 0.15s ease;
 }
-.nav-links a:hover { color: var(--secondary); }
+
+.nav-links a:hover { 
+    color: var(--primary); 
+}
+
 .btn-toggle {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
-/* ==========================================
-   HERO SECTION (U4, U5)
-   ========================================== */
+/* ========================================================
+   HERO SECTION
+   ======================================================== */
 .hero {
-    min-height: calc(100vh - 70px);
+    min-height: calc(85vh - 70px);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 2rem;
 }
-.hero-content { max-width: 750px; }
+
+.hero-content { 
+    max-width: 720px; 
+}
+
 .badge {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 2px;
+    font-size: 0.75rem;
     color: var(--secondary);
     font-weight: 800;
     letter-spacing: 1px;
     display: inline-block;
 }
+
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 800;
-    letter-spacing: -1px;
-    margin: 1.5rem 0;
+    letter-spacing: -0.5px;
+    margin: 1.2rem 0;
     text-transform: uppercase;
+    line-height: 1.1;
 }
+
 .text-gradient {
-    background: linear-gradient(to right, var(--secondary), var(--primary));
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .hero p {
     color: var(--text-muted);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
 }
+
 .hero-cta {
     display: flex;
     gap: 1rem;
     justify-content: center;
 }
 
-/* BUTTONS */
+/* ========================================================
+   REUSABLE BUTTONS
+   ======================================================== */
 .btn {
-    padding: 0.8rem 1.8rem;
-    border-radius: 4px;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2px;
     text-decoration: none;
     font-weight: 800;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     letter-spacing: 0.5px;
-    transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.1s ease, background-color 0.2s ease;
 }
-.btn:hover { transform: translateY(-2px); }
-.btn-primary { background-color: var(--secondary); color: #fff; }
-.btn-secondary { border: 1px solid var(--border-color); color: var(--text-color); background-color: var(--card-bg); }
 
-/* ==========================================
-   SECTIONS COMMON & ABOUT (IQ5)
-   ========================================== */
+.btn:hover { 
+    transform: translateY(-1px); 
+}
+
+.btn-primary { 
+    background-color: var(--primary); 
+    color: #080b11; /* Teks gelap agar kontras tinggi dengan warna neon */
+}
+
+.btn-primary:hover { 
+    background-color: #bce500; 
+}
+
+.btn-secondary { 
+    border: 1px solid var(--border-color); 
+    color: var(--text-color); 
+    background-color: var(--card-bg); 
+}
+
+.btn-secondary:hover { 
+    background-color: var(--border-color); 
+}
+
+/* ========================================================
+   LAYOUT KONTEN SEKSYEN UTAMA
+   ======================================================== */
 section {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 5rem 2rem;
+    padding: 4.5rem 2rem;
 }
+
 .section-title {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
-.section-title h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem; text-transform: uppercase; }
-.section-title p { color: var(--text-muted); }
 
+.section-title h2 { 
+    font-size: 2rem; 
+    font-weight: 800; 
+    margin-bottom: 0.4rem; 
+    text-transform: uppercase; 
+}
+
+.section-title p { 
+    color: var(--text-muted); 
+    font-size: 0.95rem; 
+}
+
+/* ========================================================
+   SECTION: TENTANG LIGA (ABOUT)
+   ======================================================== */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
 }
-.about-text p { margin-bottom: 1rem; color: var(--text-muted); }
-.about-skills h3 { font-size: 1.2rem; margin-bottom: 1rem; text-transform: uppercase; color: var(--secondary); }
-.skills-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.about-text p { 
+    margin-bottom: 1rem; 
+    color: var(--text-muted); 
+}
+
+.about-skills h3 { 
+    font-size: 1.1rem; 
+    margin-bottom: 1rem; 
+    text-transform: uppercase; 
+    color: var(--accent-dark); 
+}
+
+.skills-tags { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0.4rem; 
+}
+
 .skills-tags span {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 2px;
+    font-size: 0.85rem;
     font-weight: 600;
 }
 
-/* ==========================================
-   TIMELINE SIRKUIT (IQ3)
-   ========================================== */
+/* ========================================================
+   SECTION: KALENDER SIRKUIT (TIMELINE)
+   ======================================================== */
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 750px;
     margin: 0 auto;
     padding: 1rem 0;
 }
+
 .timeline::after {
     content: '';
     position: absolute;
@@ -201,152 +291,264 @@ section {
     bottom: 0;
     left: 20px;
 }
+
 .timeline-event {
     position: relative;
-    padding-left: 50px;
-    margin-bottom: 2.5rem;
+    padding-left: 45px;
+    margin-bottom: 2rem;
 }
+
 .timeline-event::before {
     content: '';
     position: absolute;
-    width: 14px;
-    height: 14px;
-    background-color: var(--secondary);
-    left: 14px;
-    top: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--border-color);
+    left: 16px;
+    top: 8px;
     z-index: 2;
-    border: 2px solid var(--bg-color);
-    transition: background-color 0.3s;
+    border-radius: 50%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
-.timeline-event:hover::before { background-color: var(--primary); }
+
+.timeline-event:hover::before { 
+    background-color: var(--primary);
+    transform: scale(1.3);
+}
+
 .timeline-time {
     font-weight: 800;
-    color: var(--primary);
-    font-size: 0.95rem;
-    margin-bottom: 0.25rem;
+    color: var(--secondary);
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
     text-transform: uppercase;
 }
+
 .timeline-content {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-left: 3px solid var(--secondary);
-    padding: 1.5rem;
-    border-radius: 4px;
+    border-left: 3px solid var(--primary); /* Aksen garis vertikal hijau neon */
+    padding: 1.25rem;
+    border-radius: 2px;
 }
-.timeline-content h3 { font-size: 1.25rem; margin-bottom: 0.2rem; text-transform: uppercase; }
-.timeline-content h4 { color: var(--text-muted); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.75rem; }
-.timeline-content p { color: var(--text-muted); font-size: 0.95rem; }
 
-/* ==========================================
-   TIM / CARDS REGIONAL (IQ6)
-   ========================================== */
+.timeline-content h3 { 
+    font-size: 1.2rem; 
+    margin-bottom: 0.1rem; 
+    text-transform: uppercase; 
+}
+
+.timeline-content h4 { 
+    color: var(--text-muted); 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    margin-bottom: 0.5rem; 
+}
+
+.timeline-content p { 
+    color: var(--text-muted); 
+    font-size: 0.9rem; 
+}
+
+/* ========================================================
+   SECTION: TIM FRANCHISE UNGGULAN (CARDS)
+   ======================================================== */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
+
 .project-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 2px;
     overflow: hidden;
-    transition: border-color 0.3s;
+    transition: border-color 0.2s ease, transform 0.2s ease;
 }
-.project-card:hover { border-color: var(--secondary); }
+
+.project-card:hover { 
+    transform: translateY(-2px); 
+    border-color: var(--secondary); /* Menyala warna cyan saat disorot */
+}
+
 .project-img {
-    height: 180px;
-    background-color: #0e1622;
+    height: 160px;
+    background-color: #05070b;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
-.img-placeholder { color: var(--text-muted); font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; }
-.project-info { padding: 1.5rem; }
+
+.img-placeholder { 
+    color: var(--text-muted); 
+    font-weight: 800; 
+    font-size: 0.8rem; 
+    letter-spacing: 0.5px; 
+}
+
+.project-info { 
+    padding: 1.25rem; 
+}
+
 .proj-category {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 800;
     color: var(--primary);
     text-transform: uppercase;
-    letter-spacing: 1px;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
-.project-info h3 { margin-bottom: 0.5rem; font-size: 1.4rem; text-transform: uppercase; }
-.project-info p { color: var(--text-muted); font-size: 0.95rem; }
 
-/* ==========================================
-   FITUR ANALISIS GRID (U4, U9)
-   ========================================== */
+.project-info h3 { 
+    margin-bottom: 0.4rem; 
+    font-size: 1.25rem; 
+    text-transform: uppercase; 
+}
+
+.project-info p { 
+    color: var(--text-muted); 
+    font-size: 0.9rem; 
+}
+
+/* ========================================================
+   SECTION: FITUR UTAMA (ANALISIS GRID)
+   ======================================================== */
 .hobbies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
+
 .hobby-card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 2rem;
-    border-radius: 4px;
-    transition: transform 0.3s, border-color 0.3s;
+    padding: 1.75rem;
+    border-radius: 2px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
 }
-.hobby-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--secondary);
-}
-.hobby-icon { font-size: 2.3rem; margin-bottom: 1rem; }
-.hobby-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; text-transform: uppercase; }
-.hobby-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-/* ==========================================
-   FORM NEWSLETTER / INTERACTION (SIQ5)
-   ========================================== */
+.hobby-card:hover {
+    border-color: var(--primary); /* Menyala warna lime saat disorot */
+    transform: translateY(-2px);
+}
+
+.hobby-icon { 
+    font-size: 2rem; 
+    margin-bottom: 0.75rem; 
+}
+
+.hobby-card h3 { 
+    font-size: 1.15rem; 
+    margin-bottom: 0.4rem; 
+    text-transform: uppercase; 
+}
+
+.hobby-card p { 
+    color: var(--text-muted); 
+    font-size: 0.9rem; 
+}
+
+/* ========================================================
+   SECTION: FORM NEWSLETTER / GABUNG
+   ======================================================== */
 .contact-form {
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 auto;
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 2.5rem;
-    border-radius: 4px;
+    padding: 2rem;
+    border-radius: 2px;
 }
-.form-group { margin-bottom: 1.5rem; }
-.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; color: var(--text-muted); }
+
+.form-group { 
+    margin-bottom: 1.25rem; 
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 0.4rem; 
+    font-weight: 600; 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    color: var(--text-muted); 
+}
+
 .form-group input, .form-group textarea {
     width: 100%;
-    padding: 0.8rem;
+    padding: 0.75rem;
     background-color: var(--bg-color);
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 2px;
     color: var(--text-color);
     font-family: var(--font-main);
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 0.15s ease;
 }
-.form-group input:focus, .form-group textarea:focus { border-color: var(--secondary); }
-.form-privacy { font-size: 0.75rem; color: var(--text-muted); margin-top: 1.2rem; text-align: center; }
 
-/* ==========================================
-   FOOTER & RESPONSIVITAS MEDIA QUERIES
-   ========================================== */
+.form-group input:focus, .form-group textarea:focus { 
+    border-color: var(--primary); 
+}
+
+.form-privacy { 
+    font-size: 0.7rem; 
+    color: var(--text-muted); 
+    margin-top: 1rem; 
+    text-align: center; 
+}
+
+/* ========================================================
+   FOOTER COMPONENT
+   ======================================================== */
 .footer {
     text-align: center;
-    padding: 2.5rem;
+    padding: 2rem;
     border-top: 1px solid var(--border-color);
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
+/* ========================================================
+   RESPONSIVITAS & MEDIA QUERIES
+   ======================================================= */
 @media (max-width: 768px) {
-    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .nav-links { display: none; }
-    .hero h1 { font-size: 2.3rem; }
+    .about-grid { 
+        grid-template-columns: 1fr; 
+        gap: 1.5rem; 
+    }
+    .nav-links { 
+        display: none; 
+    }
+    .hero h1 { 
+        font-size: 2.2rem; 
+    }
 }
 
 @media (min-width: 768px) {
-    .timeline::after { left: 50%; margin-left: -1px; }
-    .timeline-event { width: 50%; padding-left: 0; }
-    .timeline-event:nth-child(even) { left: 50%; padding-left: 30px; }
-    .timeline-event:nth-child(odd) { left: 0; padding-right: 30px; text-align: right; }
-    .timeline-event::before { left: auto; right: -8px; }
-    .timeline-event:nth-child(even)::before { left: -8px; right: auto; }
+    .timeline::after { 
+        left: 50%; 
+        margin-left: -1px; 
+    }
+    .timeline-event { 
+        width: 50%; 
+        padding-left: 0; 
+    }
+    .timeline-event:nth-child(even) { 
+        left: 50%; 
+        padding-left: 25px; 
+    }
+    .timeline-event:nth-child(odd) { 
+        left: 0; 
+        padding-right: 25px; 
+        text-align: right; 
+    }
+    .timeline-event::before { 
+        left: auto; 
+        right: -6px; 
+    }
+    .timeline-event:nth-child(even)::before { 
+        left: -6px; 
+        right: auto; 
+    }
 }
