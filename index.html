@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pribadi | Personal & Professional</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Hubungkan ke file CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVIGASI (U2, U3) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Halo<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#journey">Perjalanan</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#hobbies">Hobi</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <button id="theme-toggle" class="btn-toggle" aria-label="Ubah Tema">🌙</button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (U4, U5) -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">Selamat Datang di Ruang Digital Saya</span>
+            <h1>Nama Kamu <span class="text-gradient">Disini</span></h1>
+            <p>Seorang mahasiswa Rekayasa Perangkat Lunak yang senang menjembatani dunia kode abstrak dengan perangkat keras fisik dan interaksi visual kreatif.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">Lihat Karya</a>
+                <a href="#contact" class="btn btn-secondary">Mari Mengobrol</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION: TENTANG SAYA & KEAHLIAN (IQ5) -->
+    <section id="about" class="about">
+        <div class="section-title">
+            <h2>Tentang Saya</h2>
+            <p>Sisi profesional dan kompetensi teknis yang saya tekuni.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Halo! Saya adalah mahasiswa teknik yang memiliki ketertarikan mendalam pada pengembangan perangkat lunak dan ekosistem digital. Fokus eksplorasi saya saat ini meliputi pengembangan aplikasi mobile, manajemen server berbasis kontainer, serta integrasi sistem otomasi menggunakan mikrokontroler.</p>
+                <p>Basi saya, pemrograman bukan hanya sekadar mengetik baris kode, melainkan seni memecahkan masalah nyata yang dihadapi manusia sehari-hari.</p>
+            </div>
+            <div class="about-skills">
+                <h3>Teknologi yang Sering Saya Gunakan:</h3>
+                <div class="skills-tags">
+                    <span>HTML / CSS / JS</span>
+                    <span>Kotlin</span>
+                    <span>Git & GitHub</span>
+                    <span>Docker & Linux CLI</span>
+                    <span>ESP32 / Arduino</span>
+                    <span>Unity & Vuforia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TIMELINE PENDIDIKAN & ORGANISASI (IQ5) -->
+    <section id="journey" class="journey">
+        <div class="section-title">
+            <h2>Riwayat & Perjalanan</h2>
+            <p>Langkah-langkah akademis dan organisasi yang membentuk pola pikir saya.</p>
+        </div>
+
+        <div class="timeline">
+            <!-- Event 1 -->
+            <div class="timeline-event">
+                <div class="timeline-time">2024 - Sekarang</div>
+                <div class="timeline-content">
+                    <h3>D3 / D4 Rekayasa Perangkat Lunak</h3>
+                    <h4>Politeknik Manufaktur (Polman)</h4>
+                    <p>Fokus pada pembelajaran algoritma struktur data, rekayasa perangkat lunak, basis data, dan pengembangan proyek berbasis tim sesuai standar industri.</p>
+                </div>
+            </div>
+            <!-- Event 2 -->
+            <div class="timeline-event">
+                <div class="timeline-time">2025 - Sekarang</div>
+                <div class="timeline-content">
+                    <h3>Anggota / Pengurus Unit Kegiatan Mahasiswa (UKM)</h3>
+                    <h4>Divisi Riset & Teknologi</h4>
+                    <p>Bertanggung jawab dalam mengeksplorasi teknologi baru, membantu pengembangan aplikasi internal kampus, serta menyelenggarakan sharing session seputar dunia coding.</p>
+                </div>
+            </div>
+            <!-- Event 3 -->
+            <div class="timeline-event">
+                <div class="timeline-time">2021 - 2024</div>
+                <div class="timeline-content">
+                    <h3>Pendidikan Menengah Atas/Kejuruan</h3>
+                    <h4>Jurusan IPA / Teknik Komputer Jaringan</h4>
+                    <p>Mulai mengenal dasar-dasar logika pemrograman, jaringan komputer dasar, dan perakitan perangkat keras komputer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: PROYEK (IQ6, U9) -->
+    <section id="projects" class="projects">
+        <div class="section-title">
+            <h2>Proyek Pilihan</h2>
+            <p>Implementasi nyata dari ilmu yang telah saya pelajari.</p>
+        </div>
+        <div class="projects-grid">
+            <!-- Proyek 1 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <!-- Kamu bisa ganti src ke assets/images/project1.webp nanti -->
+                    <div class="img-placeholder">Pratinjau IoT</div>
+                </div>
+                <div class="project-info">
+                    <span class="proj-category">Embedded System</span>
+                    <h3>Smart Room Controller</h3>
+                    <p>Sistem otomatisasi lampu dan kipas berbasis sensor DHT22 dan PIR, diintegrasikan dengan mikrokontroler ESP32 demi efisiensi energi ruangan.</p>
+                </div>
+            </div>
+            <!-- Proyek 2 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <!-- Kamu bisa ganti src ke assets/images/project2.webp nanti -->
+                    <div class="img-placeholder">Pratinjau AR</div>
+                </div>
+                <div class="project-info">
+                    <span class="proj-category">Augmented Reality</span>
+                    <h3>AR Educational Tool</h3>
+                    <p>Aplikasi interaktif menggunakan Unity dan Vuforia untuk visualisasi komponen hardware internal mesin agar pembelajaran terasa lebih nyata.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: HOBI & SISI PERSONAL (U4, U9) -->
+    <section id="hobbies" class="hobbies">
+        <div class="section-title">
+            <h2>Di Luar Jam Kuliah</h2>
+            <p>Aktivitas dan ketertarikan personal yang menjaga kreativitas saya tetap menyala.</p>
+        </div>
+        <div class="hobbies-grid">
+            <!-- Hobi 1 -->
+            <div class="hobby-card">
+                <div class="hobby-icon">🛠️</div>
+                <h3>Hardware Tinkering</h3>
+                <p>Senang melakukan perawatan fisik perangkat, mencoba kombinasi thermal paste baru untuk performa laptop optimal, hingga merakit komponen elektronik kecil.</p>
+            </div>
+            <!-- Hobi 2 -->
+            <div class="hobby-card">
+                <div class="hobby-icon">🌐</div>
+                <h3>Self-Hosting & Homelab</h3>
+                <p>Mengulik server lokal menggunakan Docker dan Portainer untuk menjalankan layanan mandiri seperti repositori privat atau dasbor monitoring lingkungan.</p>
+            </div>
+            <!-- Hobi 3 -->
+            <div class="hobby-card">
+                <div class="hobby-icon">🎮</div>
+                <h3>Gaming & Storytelling</h3>
+                <p>Menikmati video game dengan narasi yang kuat atau mekanik yang kompleks untuk mempelajari struktur game design dan interaksi pengguna.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: KONTAK (SIQ2, SIQ5) -->
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Mari Terhubung</h2>
+            <p>Ingin berdiskusi seputar proyek, hobi, atau peluang kolaborasi? Kirimkan pesanmu.</p>
+        </div>
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" id="name" required placeholder="Nama lengkap Anda">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="alamat@email.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea id="message" rows="5" required placeholder="Tuliskan ide atau pesan Anda di sini..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer;">Kirim Pesan</button>
+            <p class="form-privacy">*Data dikirim melalui sistem validasi dan dijamin aman secara privasi.</p>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Nama Kamu. Diperbarui secara berkala di GitHub Pages.</p>
+    </footer>
+
+    <!-- Hubungkan ke file JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
